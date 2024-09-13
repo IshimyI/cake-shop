@@ -23,6 +23,11 @@ a:hover {
   margin-inline: auto;
 }
 
+.clouds {
+  position: relative;
+  z-index: 101;
+}
+
 /* header */
 
 .header {
@@ -53,7 +58,7 @@ a:hover {
 /* hero-section */
 
 .hero-section {
-  background-image: url("bg.jpg");
+  background-image: url("public/images/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -176,6 +181,37 @@ a:hover {
 
 /* downloading */
 
+.downloading {
+  background-color: #081130;
+  /* position:; */
+  z-index: 90;
+}
+
+.downloading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 300px;
+  padding-bottom: 500px;
+  color: white;
+}
+
+/* questions */
+
+.questions {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+}
+
+/* slider */
+
+.slider {
+  background-color: #081130;
+  width: 100%;
+  height: 100px;
+}
+
 /* photos */
 
 .photos {
@@ -196,6 +232,12 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 9px;
+}
+
+/* cta */
+
+.cta {
+  background-color: #fed84c;
 }
 
 /* footer */
