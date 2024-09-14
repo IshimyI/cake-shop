@@ -337,8 +337,8 @@ button {
   height: auto;
   color: #2e363e;
   background-image: url("public/images/woman.svg");
-  background-position: bottom;
-  background-size: 100% auto;
+  background-position: right;
+  background-size: 18% auto;
   background-repeat: no-repeat;
 }
 
