@@ -19,6 +19,16 @@
     </header>
     <main class="main">
       <section class="hero-section">
+        <img
+          class="hero-berry"
+          src="public/images/berry.png"
+          alt="ягода-малина"
+        />
+        <img
+          class="hero-leaf"
+          src="public/images/leaf.png"
+          alt="листик с тремором"
+        />
         <div class="container hero-container">
           <div class="hero-info">
             <div class="hero-info-sign">
@@ -131,40 +141,71 @@
           </div>
         </div>
       </section>
-      <!--  -->
-      <img src="public/images/01 1.png" class="clouds" />
-      <!--  -->
+
       <section class="downloading">
-        <div class="container downloading-container">
-          <div class="downloading-info">
-            <div class="downloading-info-sign">
-              <p class="downloading-info-sign-p">Не нашли то что нужно?</p>
+        <div class="downloading-background-top">
+          <div class="downloading-background-bottom">
+            <div class="container downloading-container">
+              <div class="downloading-info">
+                <div class="downloading-info-sign">
+                  <p class="downloading-info-sign-p">НЕ НАШЛИ ТО ЧТО НУЖНО?</p>
+                </div>
+                <div class="downloading-info-h3">
+                  <h3>Приготовим заказ любой сложности по фото или эскизу</h3>
+                </div>
+                <div class="downloading-info-delivery">
+                  <p>
+                    Загрузите фотографию или эскиз капкейков и мы рассчитаем
+                    стоимость за 30 минут
+                  </p>
+                </div>
+                <div class="downloading-info-btn-wraper">
+                  <button class="downloading-info-btn">
+                    Загрузить фотографию
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="downloading-info-h3">
-              <h3>Приготовим заказ любой сложности по фото или эскизу</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions">
+        <div class="container questions-container">
+          <div class="questions-info">
+            <div class="questions-info-sign">
+              <p class="questions-info-sign-p">КТО БУДЕТ ГОТОВИТЬ?</p>
             </div>
-            <div class="downloading-info-delivery">
-              <p>
-                Загрузите фотографию или эскиз капкейков и мы рассчитаем
-                стоимость за 30 минут
-              </p>
+            <div class="questions-info-h3">
+              <h3>Лично приготовлю и всё красиво упакую для вашего события</h3>
             </div>
-            <div class="downloading-info-btn-wraper">
-              <button class="downloading-info-btn">Перейти в каталог</button>
+
+            <ul class="questions-info-ul">
+              <li class="questions-info-li">
+                Проконсультирую по выбору капкейкови придумаю нестандартную идею
+              </li>
+              <li class="questions-info-li">
+                Приготовлю капкейки для вашего события, которые обязательно всем
+                понравятся
+              </li>
+              <li class="questions-info-li">
+                Аккуратно и красиво всё упакую, если вы хотите сделать приятный
+                подарок
+              </li>
+            </ul>
+
+            <div class="questions-info-btn-wraper">
+              <button class="questions-info-btn">Задать вопрос Юлии</button>
             </div>
           </div>
         </div>
       </section>
       <!--  -->
-      <img src="public/images/02 1.png" class="clouds" />
-      <!--  -->
-      <section class="questions"></section>
-      <!--  -->
-      <img src="public/images/03 1.png" class="clouds" />
+      <!-- <img src="public/images/03 1.png" class="clouds" /> -->
       <!--  -->
       <section class="slider"></section>
       <!--  -->
-      <img src="public/images/04 1.png" class="clouds" />
+      <!-- <img src="public/images/04 1.png" class="clouds" /> -->
       <!--  -->
       <section class="photos">
         <h3 class="photos-title">Сделали более 3.000 заказов за 2 года</h3>
@@ -202,21 +243,32 @@
         </div>
       </section>
       <!--  -->
-      <img src="public/images/05 1.png" class="clouds" />
+      <!-- <img src="public/images/05 1.png" class="clouds" /> -->
       <!--  -->
       <section class="cta">
-        <div class="container form-container">
-          <form id="form">
+        <div class="container cta-container">
+          <div class="cta-h3">Чтобы сделать заказ, укажите ваш телефон</div>
+          <div class="cta-p">
+            Мы перезвоним в течении 15 минут, чтобы уточнить ваши пожелания
+          </div>
+          <form id="form" class="form">
             <label>
               <input
                 type="tel"
-                placeholder="Номер телефона"
+                placeholder="☎ Номер телефона"
                 required
                 name="form"
+                class="cta-label"
               />
             </label>
-            <button type="submit">Сделать заказ</button>
+            <button type="submit" class="cta-btn">Сделать заказ</button>
           </form>
+          <div class="checkbox">
+            <p>
+              Нажамая на кнопку, вы соглашаетесь с условиями обработки
+              персональных данных
+            </p>
+          </div>
         </div>
       </section>
     </main>
