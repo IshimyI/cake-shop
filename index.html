@@ -209,7 +209,28 @@
         <div class="slider-background-top">
           <div class="slider-background-bottom">
             <div class="slider-forms">
-              <div class="slider-form slider-form-left">
+              <form>
+                <input
+                  type="radio"
+                  name="fancy"
+                  autofocus
+                  value="clubs"
+                  id="clubs"
+                />
+                <input type="radio" name="fancy" value="hearts" id="hearts" />
+                <input type="radio" name="fancy" value="spades" id="spades" />
+                <input
+                  type="radio"
+                  name="fancy"
+                  value="diamonds"
+                  id="diamonds"
+                />
+                <label class="label" for="clubs">&#9827; Clubs</label
+                ><label class="label" for="hearts">&#9829; Hearts</label
+                ><label class="label" for="spades">&#9824; Spades</label
+                ><label class="label" for="diamonds">&#9830; Diamonds</label>
+              </form>
+              <!-- <div class="slider-form slider-form-left">
                 <div class="slider-item">
                   <div class="slider-side slider-left-side">
                     <h3 class="slider-quotes">❝</h3>
@@ -304,11 +325,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="slider-btns">
               <button class="slider-btn slider-btn-left"><</button>
-              <button class="slider-btn slider-btn-right"></button>
+              <button class="slider-btn slider-btn-right">></button>
             </div>
           </div>
         </div>
@@ -321,31 +342,55 @@
         </p>
         <div class="photos-grid">
           <div class="photos-grid-item">
-            <img src="public/images/photo.svg" />
+            <img class="photos-grid-item-img" src="public/images/photo.svg" />
           </div>
           <div class="photos-grid-item">
-            <img src="public/images/photo (1).svg" />
+            <img
+              class="photos-grid-item-img"
+              src="public/images/photo (1).svg"
+            />
           </div>
           <div class="photos-grid-item">
-            <img src="public/images/photo (2).svg" />
+            <img
+              class="photos-grid-item-img"
+              src="public/images/photo (2).svg"
+            />
           </div>
           <div class="photos-grid-item">
-            <img src="public/images/photo (3).svg" />
+            <img
+              class="photos-grid-item-img"
+              src="public/images/photo (3).svg"
+            />
           </div>
           <div class="photos-grid-item">
-            <img src="public/images/photo (4).svg" />
+            <img
+              class="photos-grid-item-img"
+              src="public/images/photo (4).svg"
+            />
           </div>
           <div class="photos-grid-item">
-            <img src="public/images/photo (5).svg" />
+            <img
+              class="photos-grid-item-img"
+              src="public/images/photo (5).svg"
+            />
           </div>
           <div class="photos-grid-item">
-            <img src="public/images/photo (6).svg" />
+            <img
+              class="photos-grid-item-img"
+              src="public/images/photo (6).svg"
+            />
           </div>
           <div class="photos-grid-item">
-            <img src="public/images/photo (7).svg" />
+            <img
+              class="photos-grid-item-img"
+              src="public/images/photo (7).svg"
+            />
           </div>
           <div class="photos-grid-item">
-            <img src="public/images/photo (8).svg" />
+            <img
+              class="photos-grid-item-img"
+              src="public/images/photo (8).svg"
+            />
           </div>
         </div>
       </section>
@@ -379,7 +424,7 @@
             Мы перезвоним в течении 15 минут, чтобы уточнить ваши пожелания
           </div>
           <form id="form" class="form">
-            <label>
+            <label class="cta-label">
               <input
                 type="tel"
                 placeholder="☎ Номер телефона"
