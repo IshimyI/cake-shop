@@ -1485,3 +1485,15 @@ input:nth-of-type(4):checked ~ .label {
     padding-left: 30px;
   }
 }
+
+@media screen and (min-width: 1281px) {
+  .main {
+    min-width: 1281px;
+    display: flex;
+  }
+
+  .downloading-info {
+    background-color: #08113080;
+    padding-inline: 20px;
+  }
+}
