@@ -95,6 +95,7 @@ button {
   width: 250px;
   height: 250px;
   animation: rotate 5s ease-in-out alternate infinite;
+  z-index: 0;
 }
 
 .hero-berry {
@@ -104,6 +105,7 @@ button {
   width: 250px;
   height: 250px;
   animation: berry-moving 10s ease-in-out alternate infinite;
+  z-index: 0;
 }
 
 @keyframes rotate {
@@ -432,9 +434,12 @@ button {
 
 /* slider */
 
+.ccontainer {
+  width: 100%;
+}
+
 .slider {
   background-color: #081130;
-  width: 100%;
   height: auto;
 }
 
@@ -457,7 +462,6 @@ button {
 .slider-form {
   display: flex;
   height: auto;
-  max-width: 100%;
   padding: 300px 300px 0 300px;
   height: auto;
 }
@@ -468,7 +472,6 @@ button {
   background-color: white;
   gap: 54px;
   padding: 50px;
-  max-width: 100%;
 }
 
 .slider-side {
@@ -488,6 +491,12 @@ button {
   justify-content: center;
   align-items: center;
   width: 40%;
+}
+
+.sslider {
+  padding-top: 300px;
+  padding-inline: 300px;
+  padding-bottom: 200px;
 }
 
 .slider-quotes {
