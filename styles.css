@@ -10,6 +10,18 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Montserrat;
+  max-width: 100%;
+}
+
+body,
+html {
+  overflow-x: hidden; /* Отключаем горизонтальный скролл */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* utilities */
@@ -25,10 +37,15 @@ a:hover {
   color: #757c82;
 }
 
+section {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1180px;
   width: 100%;
   margin-inline: auto;
+  overflow: hidden;
 }
 
 .clouds {
@@ -110,8 +127,8 @@ button {
 
 @keyframes rotate {
   from {
-    translate: -91%;
-    rotate: -400deg;
+    translate: -41%;
+    rotate: -100deg;
   }
   to {
     translate: -19%;
@@ -121,8 +138,8 @@ button {
 
 @keyframes berry-moving {
   from {
-    translate: -91%;
-    rotate: -500deg;
+    translate: -21%;
+    rotate: -100deg;
   }
   to {
     translate: 19%;
@@ -133,8 +150,8 @@ button {
 .hero-container {
   display: flex;
   flex-direction: column;
-  padding-top: 300px;
-  padding-bottom: 500px;
+  padding-top: 20vh; /* 20% от высоты экрана */
+  padding-bottom: 10vh;
   color: white;
 }
 
@@ -218,7 +235,7 @@ button {
 
 .products-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
 }
 
@@ -482,10 +499,6 @@ button {
   padding: 0 60px 0 60px;
 }
 
-.slider-left-side {
-  width: 60%;
-}
-
 .slider-right-side {
   display: flex;
   justify-content: center;
@@ -495,7 +508,7 @@ button {
 
 .sslider {
   padding-top: 300px;
-  padding-inline: 300px;
+  padding-inline: 30px;
   padding-bottom: 200px;
 }
 
@@ -811,6 +824,12 @@ button {
   display: flex;
 }
 
+.wrapper-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /* footer */
 
 .footer {
@@ -843,9 +862,6 @@ button {
 /* phone media */
 
 @media screen and (max-width: 480px) {
-  html {
-  }
-
   h1,
   h3 {
     font-size: 22px;
@@ -861,25 +877,6 @@ button {
     flex-direction: column;
   }
 
-  .cta-leaf-bottom {
-    display: none;
-  }
-  .cta-leaf-top {
-    display: none;
-  }
-  .hero-leaf {
-    display: none;
-  }
-  .hero-berry {
-    display: none;
-  }
-  .cta-berry-bottom {
-    display: none;
-  }
-  .cta-berry-top {
-    display: none;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -889,8 +886,16 @@ button {
     height: auto;
   }
 
-  .header {
-    position: absolute;
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .main {
+    padding-inline: 20px;
   }
 
   .header-info {
@@ -1191,6 +1196,22 @@ button {
 /* panel media */
 
 @media screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 20px; /* Уменьшаем заголовки */
+  }
+  .item-title {
+    font-size: 18px;
+  }
+  .item-price {
+    font-size: 16px;
+  }
+  .products-img {
+    max-width: 100%;
+    height: auto; /* Сохраняем пропорции изображений */
+  }
+
   .main {
     max-width: 768px;
     display: flex;
@@ -1320,6 +1341,11 @@ button {
 /* laptop media */
 
 @media screen and (max-width: 1024px) {
+  .hero-leaf,
+  .hero-berry {
+    display: none;
+  }
+
   .main {
     max-width: 1024px;
     display: flex;
