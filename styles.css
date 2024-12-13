@@ -10,12 +10,13 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Montserrat;
-  max-width: 100%;
+  width: 100%;
 }
 
 body,
 html {
   overflow-x: hidden; /* Отключаем горизонтальный скролл */
+  width: 100%;
 }
 
 *,
@@ -42,7 +43,6 @@ section {
 }
 
 .container {
-  max-width: 1180px;
   width: 100%;
   margin-inline: auto;
   overflow: hidden;
@@ -220,9 +220,6 @@ button {
 
 /* products */
 
-.products {
-}
-
 .products-container {
   display: flex;
   flex-direction: column;
@@ -235,7 +232,7 @@ button {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 }
 
@@ -510,6 +507,7 @@ button {
   padding-top: 300px;
   padding-inline: 30px;
   padding-bottom: 200px;
+  background-color: #081130;
 }
 
 .slider-quotes {
@@ -841,6 +839,8 @@ button {
   width: 100%;
   height: auto;
   color: #7e868e;
+  background-color: #081130;
+  padding-bottom: 40px;
 }
 
 .footer-info-top {
@@ -854,14 +854,15 @@ button {
 .footer-info-bottom {
   display: flex;
   color: #7e868e;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 12px;
 }
 
 /* phone media */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width <= 480px) {
   h1,
   h3 {
     font-size: 22px;
@@ -872,7 +873,6 @@ button {
   }
 
   .main {
-    max-width: 480px;
     display: flex;
     flex-direction: column;
   }
@@ -892,10 +892,6 @@ button {
     left: 0;
     width: 100%;
     z-index: 1000;
-  }
-
-  .main {
-    padding-inline: 20px;
   }
 
   .header-info {
@@ -1195,7 +1191,7 @@ button {
 
 /* panel media */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width <= 768px) {
   h1,
   h2,
   h3 {
@@ -1242,9 +1238,6 @@ button {
 
   .products {
     padding: 0;
-  }
-
-  .downloading-info {
   }
 
   .products-title {
@@ -1340,19 +1333,14 @@ button {
 
 /* laptop media */
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
   .hero-leaf,
   .hero-berry {
     display: none;
   }
 
   .main {
-    max-width: 1024px;
     display: flex;
-  }
-
-  .hero-info {
-    padding-left: 50px;
   }
 
   .products-title {
@@ -1433,14 +1421,10 @@ button {
 
 /* desktop media */
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width <= 1280px) {
   .main {
     max-width: 1280px;
     display: flex;
-  }
-
-  .hero-info {
-    padding-left: 50px;
   }
 
   .cta-label {
