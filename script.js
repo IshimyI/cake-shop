@@ -3,9 +3,8 @@
 const form = document.querySelector("#form");
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  alert(JSON.stringify(data));
+  alert("Спасибо! Мы перезвоним в течение 15 минут, чтобы уточнить детали заказа.");
+  form.reset();
 });
 
 const items = document.querySelectorAll(".imgs");
@@ -24,7 +23,6 @@ function showNextItem() {
   }
 
   items[count].classList.add("active");
-  console.log(count);
 }
 
 function showPreviousItem() {
@@ -37,7 +35,6 @@ function showPreviousItem() {
   }
 
   items[count].classList.add("active");
-  console.log(count);
 }
 
 function keyPress(e) {
@@ -52,3 +49,4 @@ function keyPress(e) {
 
 nextItem.addEventListener("click", showNextItem);
 previousItem.addEventListener("click", showPreviousItem);
+document.addEventListener("keydown", keyPress);
